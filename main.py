@@ -1,20 +1,25 @@
 def count_batteries_by_health(present_capacities):
-  
-  rated_capacity = 120
+  #Initialization of rated capacity
+  rated_capacity = 120    
+
+  #Initialization of the conditional counts
   healthy_count = 0
   exchange_count = 0
   failed_count = 0
 
   for present_capacity in present_capacities:
-    soh_percentage = (present_capacity/rated_capacity)*100
-    
-    if soh_percentage > 80:
+    #Calculation of the SoH percentage 
+    soh_percentage = (present_capacity/rated_capacity)*100    
+
+    #Classify the batteries base on the SoH percentage
+    if soh_percentage > 80:       
       healthy_count += 1
     elif 62 <= soh_percentage <= 80:
       exchange_count +=1
     else:
       failed_count +=1
-      
+
+  #Return the classified counts
   return {
     "healthy": healthy_count,
     "exchange": exchange_count,

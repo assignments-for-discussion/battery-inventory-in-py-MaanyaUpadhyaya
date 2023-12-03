@@ -15,9 +15,9 @@ def count_batteries_by_health(present_capacities):
     if soh_percentage > 80:       
       healthy_count += 1
     elif 62 <= soh_percentage <= 80:
-      exchange_count +=1
+      exchange_count += 1
     else:
-      failed_count +=1
+      failed_count += 1
 
   #Return the classified counts
   return {

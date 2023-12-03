@@ -1,5 +1,11 @@
-
 def count_batteries_by_health(present_capacities):
+  rated_capacity = 120
+  healthy_count = 0
+  exchange_count = 0
+  failed_count = 0
+
+  for present_capacity in present_capacities:
+    
   return {
     "healthy": 0,
     "exchange": 0,
